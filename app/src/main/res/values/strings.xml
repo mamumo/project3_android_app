@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Bills</string>
+    <string name="app_name">BillSplitter</string>
+    <string name="welcome">Welcome to BillSplitter</string>
+    <string name="name_example">Your Name</string>
+    <string name="save"> Save </string>
+    <string name="event"> Event e.g "Birthday Dinner"</string>
+    <string name="event_activity"> Event</string>
 </resources>
