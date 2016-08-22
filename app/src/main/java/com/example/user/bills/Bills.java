@@ -17,6 +17,7 @@ public class Bills extends AppCompatActivity {
 
     EditText mNameEditText;
     EditText mEventEditText;
+    EditText mSelectDateText;
 //    TextView mSaveNameText;
 //    TextView mSaveEventText;
     Button mSaveButton;
@@ -30,6 +31,7 @@ public class Bills extends AppCompatActivity {
 
         mNameEditText = (EditText)findViewById(R.id.enter_name_text);
         mEventEditText = (EditText)findViewById(R.id.enter_event_text);
+        mSelectDateText = (EditText)findViewById(R.id.enter_date);
         mSaveButton = (Button)findViewById(R.id.save_button);
 //        mSaveNameText = (TextView)findViewById(R.id.save_name);
 //        mSaveEventText = (TextView)findViewById(R.id.save_event);
@@ -41,17 +43,16 @@ public class Bills extends AppCompatActivity {
             String name = mNameEditText.getText().toString();
             Log.d("Bills:", "Save button clicked");
             Log.d("Bills:", "The name entered is '" + name + "'");
-//            mSaveNameText.setText(name);
             String event = mEventEditText.getText().toString();
             Log.d("Bills:", "The event entered is '" + event + "'");
-//            mSaveEventText.setText(event);
+            String date = mSelectDateText.getText().toString();
 
             Intent event_activity = new Intent(Bills.this, EventActivity.class);
             event_activity.putExtra("name", "Hi " + name + "!");
             event_activity.putExtra("event", event);
+            event_activity.putExtra("date", date);
 
-////            Intent intent2 = new Intent(Bills.this, EventActivity.class);
-//            intent2.putExtra("event", event);
+////
             startActivity(event_activity);
 
 

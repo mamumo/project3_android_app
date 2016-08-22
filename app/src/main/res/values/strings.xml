@@ -5,4 +5,7 @@
     <string name="save"> Save </string>
     <string name="event"> Event e.g "Birthday Dinner"</string>
     <string name="event_activity"> Event</string>
+    <string name="date">Enter date</string>
+
+    <string name="add_to_order">What will you be having?</string>
 </resources>

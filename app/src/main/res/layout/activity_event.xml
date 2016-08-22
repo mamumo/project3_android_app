@@ -10,10 +10,34 @@
         android:layout_height="wrap_content"
         android:text=""/>
 
-    <TextView
-        android:id="@+id/save_event"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:id="@+id/order_input"
+        android:hint="@string/add_to_order"
+        android:textSize="30dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_to_order_button"
+        android:text="@string/save"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView">
+
+    </ListView>
+
+    <!--<TextView-->
+        <!--android:id="@+id/save_event"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text=""/>-->
 
 </LinearLayout>
