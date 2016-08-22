@@ -1,5 +1,6 @@
 package com.example.user.bills;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +25,6 @@ public class EventActivity extends AppCompatActivity {
     ArrayList<String> mAdd = new ArrayList<String>();
     EditText mOrderInputText;
     ListView mShow;
-//    TextView mSaveEventText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +32,12 @@ public class EventActivity extends AppCompatActivity {
         Log.d("Bills:", "EventActivity.onCreateCalled");
         setContentView(R.layout.activity_event);
 
+//        String savedText = SavedOrderPreferences.getStoredText(this);
+
 
 
         mSaveNameText = (TextView)findViewById(R.id.save_name);
-//        mSaveEventText = (TextView)findViewById(R.id.save_event);
+
 
         Intent event_activity = getIntent();
         Bundle extras = event_activity.getExtras();
@@ -44,9 +46,6 @@ public class EventActivity extends AppCompatActivity {
         String eventName = extras.getString("event");
 
         this.setTitle(eventName);
-
-
-//        mSaveEventText.setText(event);
 
 
         mOrderInputText = (EditText)findViewById(R.id.order_input);
@@ -67,12 +66,16 @@ public class EventActivity extends AppCompatActivity {
                 }
                 else{
                     mAdd.add(getInput);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(EventActivity.this, android.R.layout.simple_list_item_1, mAdd);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(EventActivity.this, android.R.layout.simple_list_item_1, mAdd);
                     mShow.setAdapter(adapter);
-                    ((EditText)findViewById(R.id.order_input)).setText(" ");
+                    ((EditText)findViewById(R.id.order_input)).setText("");
                 }
 
-
+//
+//                mOrderInputText.setText(getInput);
+//                Context context = v.getContext();
+//                SavedOrderPreferences.setStoredText(context,getInput);
+//                Log.d("EventActivity: ", "SavedOrderPreferences.setStoredText called");
         };
     });
 
