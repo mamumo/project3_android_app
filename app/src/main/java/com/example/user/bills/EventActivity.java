@@ -11,6 +11,7 @@ import android.widget.TextView;
  */
 public class EventActivity extends AppCompatActivity {
 
+    TextView mSaveNameText;
     TextView mSaveEventText;
 
     @Override
@@ -19,9 +20,16 @@ public class EventActivity extends AppCompatActivity {
         Log.d("Bills:", "EventActivity.onCreateCalled");
         setContentView(R.layout.activity_event);
 
-        Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
-        String event = extras.getString("event");
+        mSaveNameText = (TextView)findViewById(R.id.save_name);
+        mSaveEventText = (TextView)findViewById(R.id.save_event);
+
+        Intent event_activity = getIntent();
+        Bundle extras = event_activity.getExtras();
+        String name = extras.getString("name");//want to get the type back- getString/getInt
+        mSaveNameText.setText(name);
+        String event = extras.getString("event");//want to get the type back- getString/getInt
         mSaveEventText.setText(event);
+
+
     }
 }

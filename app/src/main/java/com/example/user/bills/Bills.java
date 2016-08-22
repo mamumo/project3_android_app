@@ -17,7 +17,8 @@ public class Bills extends AppCompatActivity {
 
     EditText mNameEditText;
     EditText mEventEditText;
-    TextView mSaveNameText;
+//    TextView mSaveNameText;
+//    TextView mSaveEventText;
     Button mSaveButton;
 
 
@@ -30,7 +31,8 @@ public class Bills extends AppCompatActivity {
         mNameEditText = (EditText)findViewById(R.id.enter_name_text);
         mEventEditText = (EditText)findViewById(R.id.enter_event_text);
         mSaveButton = (Button)findViewById(R.id.save_button);
-        mSaveNameText = (TextView)findViewById(R.id.save_name);
+//        mSaveNameText = (TextView)findViewById(R.id.save_name);
+//        mSaveEventText = (TextView)findViewById(R.id.save_event);
 
 
         mSaveButton.setOnClickListener(new View.OnClickListener() {
@@ -39,13 +41,21 @@ public class Bills extends AppCompatActivity {
             String name = mNameEditText.getText().toString();
             Log.d("Bills:", "Save button clicked");
             Log.d("Bills:", "The name entered is '" + name + "'");
-            mSaveNameText.setText(name);
+//            mSaveNameText.setText(name);
             String event = mEventEditText.getText().toString();
+            Log.d("Bills:", "The event entered is '" + event + "'");
+//            mSaveEventText.setText(event);
+
+            Intent event_activity = new Intent(Bills.this, EventActivity.class);
+            event_activity.putExtra("name", "Hi " + name + "!");
+            event_activity.putExtra("event", event);
+
+////            Intent intent2 = new Intent(Bills.this, EventActivity.class);
+//            intent2.putExtra("event", event);
+            startActivity(event_activity);
 
 
-            Intent intent = new Intent(Bills.this, EventActivity.class);
-            intent.putExtra("event", event);
-            startActivity(intent);
+
 
 
 
