@@ -22,7 +22,6 @@ public class SavedOrderPreferences {
 
     public static String getStoredText(Context context) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String text = sharedPreferences.getString(PREF_SAVEDTEXT, null);
-        return text;
+        return = sharedPreferences.getString(PREF_SAVEDTEXT, null);
     }
 }

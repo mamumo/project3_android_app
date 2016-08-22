@@ -70,6 +70,8 @@ public class EventActivity extends AppCompatActivity {
                     mShow.setAdapter(adapter);
                     ((EditText)findViewById(R.id.order_input)).setText("");
                 }
+                Context context = v.getContext();
+                SavedOrderPreferences.setStoredText(context,getInput);
 
 //
 //                mOrderInputText.setText(getInput);
