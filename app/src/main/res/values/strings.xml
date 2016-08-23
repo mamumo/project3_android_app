@@ -1,11 +1,17 @@
 <resources>
     <string name="app_name">BillSplitter</string>
-    <string name="welcome">Welcome to BillSplitter</string>
+    <string name="welcome_message">Welcome to BillSplitter</string>
+    <string name="start">Let\'s Begin</string>
+
+    <string name="user_message"> First Things First... </string>
     <string name="name_example">Your Name</string>
-    <string name="save"> Save </string>
+    <string name="next"> Next </string>
+
+
     <string name="event"> Event e.g "Birthday Dinner"</string>
     <string name="event_activity"> Event</string>
     <string name="date">Enter date</string>
+    <string name="save">Save</string>
 
     <string name="add_to_order">What will you be having?</string>
 </resources>

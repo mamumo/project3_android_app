@@ -20,8 +20,8 @@ public class SavedOrderPreferences {
         editor.apply();
     }
 
-    public static String getStoredText(Context context) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        return = sharedPreferences.getString(PREF_SAVEDTEXT, null);
-    }
+//    public static String getStoredText(Context context) {
+//        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+//        return = sharedPreferences.getString(PREF_SAVEDTEXT, null);
+//    }
 }

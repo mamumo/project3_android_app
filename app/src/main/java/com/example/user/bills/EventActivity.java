@@ -43,9 +43,9 @@ public class EventActivity extends AppCompatActivity {
         Bundle extras = event_activity.getExtras();
         String name = extras.getString("name");//want to get the type back- getString/getInt
         mSaveNameText.setText(name);
-        String eventName = extras.getString("event");
+//        String eventName = extras.getString("event");
 
-        this.setTitle(eventName);
+        this.setTitle(name);
 
 
         mOrderInputText = (EditText)findViewById(R.id.order_input);
@@ -70,8 +70,8 @@ public class EventActivity extends AppCompatActivity {
                     mShow.setAdapter(adapter);
                     ((EditText)findViewById(R.id.order_input)).setText("");
                 }
-                Context context = v.getContext();
-                SavedOrderPreferences.setStoredText(context,getInput);
+//                Context context = v.getContext();
+//                SavedOrderPreferences.setStoredText(context,getInput);
 
 //
 //                mOrderInputText.setText(getInput);
