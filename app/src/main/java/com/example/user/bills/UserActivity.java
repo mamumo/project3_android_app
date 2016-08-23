@@ -1,6 +1,5 @@
 package com.example.user.bills;
 
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -40,10 +39,7 @@ public class UserActivity extends AppCompatActivity {
 
                 Intent user_activity = new Intent(UserActivity.this, EventActivity.class);
                 user_activity.putExtra("name", name);
-//                user_activity.putExtra("event", event);
-//                event_activity.putExtra("date", date);
 
-////
                 startActivity(user_activity);
 
 

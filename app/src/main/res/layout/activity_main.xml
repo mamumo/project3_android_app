@@ -4,43 +4,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/enter_event_text"
-        android:hint="@string/event"
-        android:textSize="30dp"
-        android:layout_marginTop="50dp"
-    />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/enter_date"
-        android:hint="@string/date"
-        android:textSize="30dp"
-        android:layout_marginTop="50dp"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/save_button"
-        android:text="@string/next"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="25dp"/>
-
-    <!--<TextView-->
-        <!--android:id="@+id/save_name"-->
+    <!--<EditText-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
-        <!--android:text=""/>-->
+        <!--android:id="@+id/enter_event_text"-->
+        <!--android:hint="@string/event"-->
+        <!--android:textSize="30dp"-->
+        <!--android:layout_marginTop="50dp"-->
+    <!--/>-->
 
-    <!--<TextView-->
-        <!--android:id="@+id/save_event"-->
+    <!--<EditText-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
-        <!--android:text=""/>-->
+        <!--android:id="@+id/enter_date"-->
+        <!--android:hint="@string/date"-->
+        <!--android:textSize="30dp"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--/>-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/save_button"-->
+        <!--android:text="@string/next"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:layout_marginLeft="25dp"/>-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/save_name"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text=""/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/save_event"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text=""/>&ndash;&gt;-->
 
 
 
