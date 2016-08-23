@@ -13,6 +13,7 @@
     <string name="date">Enter date</string>
     <string name="save">Save</string>
 
-    <string name="add_to_order">What will you be having?</string>
+    <string name="member_order">Who?</string>
+    <string name="add_to_order">What are they ordering?</string>
     <string name="cost">Price?</string>
 </resources>

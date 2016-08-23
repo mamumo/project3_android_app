@@ -17,25 +17,32 @@
             </intent-filter>
         </activity>
 
+        <!--<activity-->
+            <!--android:name="com.example.user.bills.WelcomeActivity"-->
+            <!--android:label="@string/app_name">-->
+        <!--</activity>-->
+
         <activity
-            android:name="com.example.user.bills.Bills"
-            android:label="@string/app_name">
+            android:name="com.example.user.bills.EventActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".WelcomeActivity">
         </activity>
 
         <activity
             android:name="com.example.user.bills.UserActivity"
-            android:label="@string/app_name">
-        </activity>
-
-        <activity
-            android:name="com.example.user.bills.EventActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:parentActivityName=".EventActivity">
         </activity>
 
         <activity
             android:name=".OrderActivity"
             android:label="@string/event_activity"
-            android:parentActivityName=".Bills">
+            android:parentActivityName=".UserActivity">
+        </activity>
+
+        <activity
+            android:name=".DisplayOrderActivity"
+            android:label="@string/event_activity">
 
         </activity>
 

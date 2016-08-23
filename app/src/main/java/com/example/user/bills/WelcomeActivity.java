@@ -36,7 +36,7 @@ public class WelcomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("Welcome", "startButton clicked");
 
-                Intent main_activity = new Intent(WelcomeActivity.this, UserActivity.class);
+                Intent main_activity = new Intent(WelcomeActivity.this, EventActivity.class);
 //                main_activity.putExtra("name", "Hi " + name + "!");
 //                event_activity.putExtra("event", event);
 //                event_activity.putExtra("date", date);

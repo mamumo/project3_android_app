@@ -29,11 +29,6 @@ public class EventActivity extends AppCompatActivity {
         mEventEditText = (EditText) findViewById(R.id.enter_event_text);
         mNextButton = (Button) findViewById(R.id.next_button);
 
-        Intent user_activity = getIntent();
-        Bundle extras = user_activity.getExtras();
-        String name = extras.getString("name");//want to get the type back- getString/getInt
-
-        this.setTitle(name);
 
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +38,7 @@ public class EventActivity extends AppCompatActivity {
                 Log.d("Event:", "The event entered is '" + event + "'");
 
 
-                Intent event_activity = new Intent(EventActivity.this, OrderActivity.class);
+                Intent event_activity = new Intent(EventActivity.this, UserActivity.class);
                 event_activity.putExtra("event", event);
 
                 startActivity(event_activity);

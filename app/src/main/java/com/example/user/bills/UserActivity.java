@@ -29,6 +29,12 @@ public class UserActivity extends AppCompatActivity {
         mNameEditText = (EditText) findViewById(R.id.enter_name_text);
         mNextButton = (Button) findViewById(R.id.next_button);
 
+        Intent event_activity = getIntent();
+        Bundle extras = event_activity.getExtras();
+        String event = extras.getString("event");//want to get the type back- getString/getInt
+
+        this.setTitle(event);
+
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +43,7 @@ public class UserActivity extends AppCompatActivity {
                 Log.d("Bills:", "The name entered is '" + name + "'");
 
 
-                Intent user_activity = new Intent(UserActivity.this, EventActivity.class);
+                Intent user_activity = new Intent(UserActivity.this, OrderActivity.class);
                 user_activity.putExtra("name", name);
 
                 startActivity(user_activity);
