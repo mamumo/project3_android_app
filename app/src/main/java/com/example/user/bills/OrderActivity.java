@@ -19,10 +19,11 @@ import java.util.ArrayList;
  */
 public class OrderActivity extends AppCompatActivity {
 
-    TextView mSaveNameText;
+//    TextView mSaveNameText;
     Button mAddToOrder;
     ArrayList<String> mAdd = new ArrayList<String>();
     EditText mOrderInputText;
+    EditText mOrderCost;
     ListView mShow;
 
     @Override
@@ -43,6 +44,7 @@ public class OrderActivity extends AppCompatActivity {
 
 
         mOrderInputText = (EditText)findViewById(R.id.order_input);
+        mOrderCost = (EditText)findViewById(R.id.cost_input);
         mShow = (ListView)findViewById(R.id.listView);
         mAddToOrder = (Button)findViewById(R.id.add_to_order_button);
 
@@ -51,6 +53,7 @@ public class OrderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String getInput = mOrderInputText.getText().toString();
+                String getCost = mOrderCost.getText().toString();
 
                 if(mAdd.contains(getInput)) {
                     Toast.makeText(getBaseContext(), "Another?", Toast.LENGTH_LONG).show();
@@ -59,10 +62,12 @@ public class OrderActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "What would you like?", Toast.LENGTH_LONG).show();
                 }
                 else{
-                    mAdd.add(getInput);
+                    String fullItem = getInput + " " + getCost;
+                    mAdd.add(fullItem);
                     ArrayAdapter<String> adapter = new ArrayAdapter<>(OrderActivity.this, android.R.layout.simple_list_item_1, mAdd);
                     mShow.setAdapter(adapter);
                     ((EditText)findViewById(R.id.order_input)).setText("");
+                    ((EditText)findViewById(R.id.cost_input)).setText("");
                 }
 //                Context context = v.getContext();
 //                SavedOrderPreferences.setStoredText(context,getInput);
