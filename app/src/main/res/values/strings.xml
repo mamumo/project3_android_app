@@ -3,6 +3,8 @@
     <string name="welcome_message">Welcome to BillSplitter</string>
     <string name="start">Let\'s Begin</string>
 
+    <string name="event_header">Enter Your Details</string>
+
     <string name="user_message"> First Things First... </string>
     <string name="name_example">Your Name</string>
     <string name="next"> Next </string>
@@ -14,8 +16,11 @@
     <string name="save">Save</string>
 
     <string name="member_order">Who?</string>
-    <string name="add_to_order">What are they ordering?</string>
+    <string name="add_to_order">What are you ordering?</string>
     <string name="cost">Price?</string>
+    <string name="add">Add</string>
 
+
+    <string name="view_order">View Order</string>
     <string name="order_detail"> Your Order </string>
 </resources>

@@ -6,10 +6,10 @@
     android:background="@drawable/windmills"
     >
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_message"/>
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/welcome_message"/>-->
 
     <Button
         android:layout_width="wrap_content"

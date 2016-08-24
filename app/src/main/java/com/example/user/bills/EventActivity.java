@@ -14,6 +14,7 @@ import android.widget.EditText;
 public class EventActivity extends AppCompatActivity {
 
     EditText mEventEditText;
+    EditText mNameEditText;
     Button mNextButton;
 
 
@@ -29,17 +30,22 @@ public class EventActivity extends AppCompatActivity {
         mEventEditText = (EditText) findViewById(R.id.enter_event_text);
         mNextButton = (Button) findViewById(R.id.next_button);
 
+//        mNameEditText = (EditText) findViewById(R.id.enter_name_text);
+//        mNextButton = (Button) findViewById(R.id.next_button);
+
 
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String event = mEventEditText.getText().toString();
+//                String name = mNameEditText.getText().toString();
                 Log.d("Event:", "Next button clicked");
                 Log.d("Event:", "The event entered is '" + event + "'");
 
 
-                Intent event_activity = new Intent(EventActivity.this, UserActivity.class);
+                Intent event_activity = new Intent(EventActivity.this, OrderActivity.class);
                 event_activity.putExtra("event", event);
+//                event_activity.putExtra("event", event);
 
                 startActivity(event_activity);
 

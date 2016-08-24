@@ -49,10 +49,12 @@ public class OrderActivity extends AppCompatActivity {
 
         Intent user_activity = getIntent();
         Bundle extras = user_activity.getExtras();
-        String name = extras.getString("name");//want to get the type back- getString/getInt
+        String name = extras.getString("name");
+        String event = extras.getString("event");//want to get the type back- getString/getInt
 
         mOrder = new Order(name);
-        this.setTitle(name);
+//        this.setTitle(name);
+        this.setTitle(event);
 
 //        mSharedPreferences = new SavedTextPreferences();
 
