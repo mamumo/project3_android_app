@@ -14,6 +14,8 @@ import org.json.JSONObject;
  */
 public class DisplayOrderActivity extends AppCompatActivity {
 
+    TextView mDescription;
+    TextView mCost;
     TextView mTotalDisplay;
     JSONArray json;
     Order mOrder;
@@ -30,6 +32,8 @@ public class DisplayOrderActivity extends AppCompatActivity {
         mOrder = new Order("Order");
 
         mTotalDisplay = (TextView) findViewById(R.id.save_list);
+        mDescription = (TextView) findViewById(R.id.description);
+        mCost = (TextView) findViewById(R.id.cost);
 
         String savedText = SavedTextPreferences.getStoredText(this);
 
@@ -72,7 +76,9 @@ public class DisplayOrderActivity extends AppCompatActivity {
         float total = mOrder.totalCostOfOrder();
         String totalString = Float.toString(total);
 
-        mTotalDisplay.setText(totalString);
+        mTotalDisplay.setText("Total: £" + totalString);
+        mDescription.setText(savedText);
+
 
 
     }
