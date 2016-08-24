@@ -16,4 +16,6 @@
     <string name="member_order">Who?</string>
     <string name="add_to_order">What are they ordering?</string>
     <string name="cost">Price?</string>
+
+    <string name="order_detail"> Your Order </string>
 </resources>
