@@ -1,5 +1,10 @@
 package com.example.user.bills;
 
+import android.util.Log;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.math.BigDecimal;
 
 /**
@@ -13,6 +18,17 @@ public class Item {
     public Item(String description, float cost) {
         this.description = description;
         this.cost = cost;
+    }
+    public JSONObject getJSONObject(){
+        JSONObject object = new JSONObject();
+        try {
+            object.put("description", description);
+            object.put("cost", cost);
+        }
+        catch (JSONException ex) {
+            Log.e("item!!!:", "exception in item class for json object");
+        }
+        return object;
     }
 
     protected String getItemDescription() {

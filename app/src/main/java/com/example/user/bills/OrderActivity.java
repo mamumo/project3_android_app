@@ -1,6 +1,5 @@
 package com.example.user.bills;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -31,9 +33,10 @@ public class OrderActivity extends AppCompatActivity {
     TextView mTotal;
 
     Order mOrder;
+    JSONArray json = new JSONArray();
 
 
-    SharedPreferences mSharedPreferences;
+//    SavedTextPreferences mSharedPreferences;
 
 
 
@@ -51,14 +54,14 @@ public class OrderActivity extends AppCompatActivity {
         mOrder = new Order(name);
         this.setTitle(name);
 
-        mSharedPreferences = new SharedPreferences();
+//        mSharedPreferences = new SavedTextPreferences();
 
         mOrderInputText = (EditText)findViewById(R.id.order_input);
         mOrderCost = (EditText)findViewById(R.id.cost_input);
         mShow = (ListView)findViewById(R.id.listView);
         mAddToOrder = (Button)findViewById(R.id.add_to_order_button);
         mTotal = (TextView)findViewById(R.id.total_order_cost);
-
+        mGoToOrder = (Button)findViewById(R.id.go_to_order_button);
 
 
 
@@ -86,6 +89,8 @@ public class OrderActivity extends AppCompatActivity {
 
                 mTotal.setText("Total: " + totalString);
 
+                json.put(item.getJSONObject());
+
 
 
 
@@ -103,26 +108,25 @@ public class OrderActivity extends AppCompatActivity {
                     ((EditText)findViewById(R.id.order_input)).setText("");
                     ((EditText)findViewById(R.id.cost_input)).setText("");
 
-//                    mSharedPreferences.save(OrderActivity.this, item);
+                    Context context = v.getContext();
+                    SavedTextPreferences.setStoredText(context, json.toString());
+
+
 
                 }
-//
-
-//
         }
-
-
     });
-//        mGoToOrder.setOnClickListener(new View.OnClickListener(){
-//            public void onClick(View v) {
-//                Intent show_order = new Intent(OrderActivity.this, DisplayOrderActivity.class);
-//                startActivity(show_order);
-//            }
-//
-//
-//        });
 
 
 
+        mGoToOrder.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent show_order = new Intent(OrderActivity.this, DisplayOrderActivity.class);
+                startActivity(show_order);
+            }
+
+
+        });
     }
+
 }
