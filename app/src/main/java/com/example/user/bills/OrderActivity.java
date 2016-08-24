@@ -70,8 +70,7 @@ public class OrderActivity extends AppCompatActivity {
                 String getInput = mOrderInputText.getText().toString();
                 String getCost = mOrderCost.getText().toString();
 
-
-                int cost =  Integer.parseInt(getCost);
+                float cost =  Float.parseFloat(getCost);
 
                 String fullItem = getInput + " "+ "-"+" " + getCost;
 
@@ -79,9 +78,9 @@ public class OrderActivity extends AppCompatActivity {
 
                 mOrder.addToOrder(item);
 
-                int totalCost = mOrder.totalCostOfOrder();
+                float totalCost = mOrder.totalCostOfOrder();
 
-                String totalString = Integer.toString(totalCost);
+                String totalString = Float.toString(totalCost);
 
                 Log.d("OrderActivity", totalString);
 
