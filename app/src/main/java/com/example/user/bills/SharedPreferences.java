@@ -1,8 +1,8 @@
 package com.example.user.bills;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
+//import android.content.SharedPreferences;
+//import android.preference.PreferenceManager;
 
 /**
  * Created by user on 22/08/2016.

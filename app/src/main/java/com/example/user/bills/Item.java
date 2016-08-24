@@ -25,7 +25,7 @@ public class Item {
         return this.cost;
     }
 
-    public setItemCost(int newCost) {
+    public void setItemCost(int newCost) {
         this.cost = newCost;
     }
 

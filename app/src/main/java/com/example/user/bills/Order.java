@@ -11,7 +11,7 @@ public class Order {
 
     public Order(String name) {
         this.name = name;
-        this.items = ArrayList < Item > ();
+        this.items = new ArrayList<Item>();
     }
 
     public String getName() {
@@ -33,7 +33,7 @@ public class Order {
     public int totalCostOfOrder() {
         int total = 0;
         for(Item item : items) {
-            total += item.cost();
+            total += item.getItemCost();
         }
         return total;
     }
